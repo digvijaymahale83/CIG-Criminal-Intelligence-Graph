@@ -1,0 +1,95 @@
+{
+  "app": {
+    "title": "CIG — Criminal Intelligence Graph",
+    "shortTitle": "CIG",
+    "subtitle": "Criminal Intelligence Graph",
+    "environment": "Synthetic Intelligence Environment",
+    "roleClearance": "Role clearance:",
+    "administrator": "Administrator",
+    "investigator": "Investigator",
+    "signOut": "Sign out session"
+  },
+  "nav": {
+    "intelligence": "INTELLIGENCE",
+    "operations": "OPERATIONS",
+    "administration": "ADMINISTRATION",
+    "overview": "Overview",
+    "investigations": "Investigations",
+    "casesEvidence": "Cases & Evidence",
+    "evidence": "Cases & Evidence",
+    "entityIntel": "Entity Intelligence",
+    "entities": "Entity Intelligence",
+    "knowledgeGraph": "Knowledge Graph",
+    "graph": "Knowledge Graph",
+    "graphAnalytics": "Analytics",
+    "analytics": "Analytics",
+    "timeline": "Investigation Timeline",
+    "crossCase": "Entity Resolution",
+    "resolution": "Entity Resolution",
+    "networkMap": "Investigation Map",
+    "map": "Investigation Map",
+    "systemAlerts": "Alerts",
+    "alerts": "Alerts",
+    "intelReports": "Reports",
+    "reports": "Reports",
+    "audit": "Compliance & Audit",
+    "copilot": "Investigation Copilot"
+  },
+  "actions": {
+    "refresh": "Refresh",
+    "review": "Review",
+    "verify": "Verify",
+    "view": "View",
+    "filter": "Filter",
+    "search": "Search",
+    "open": "Open",
+    "cancel": "Cancel",
+    "save": "Save",
+    "export": "Export",
+    "close": "Close"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggleTheme": "Toggle theme"
+  },
+  "language": {
+    "selectLanguage": "Language",
+    "en": "English",
+    "mr": "मराठी (Marathi)",
+    "hi": "हिन्दी (Hindi)",
+    "ta": "தமிழ் (Tamil)",
+    "te": "తెలుగు (Telugu)",
+    "bn": "বাংলা (Bengali)",
+    "gu": "ગુજરાતી (Gujarati)",
+    "kn": "ಕನ್ನಡ (Kannada)"
+  },
+  "responsibleAi": {
+    "badge": "EVIDENCE-BACKED DECISION SUPPORT",
+    "title": "Governance & Evidentiary Standard",
+    "notice": "Analytical and model-generated signals are investigative leads and require human verification. They do not establish guilt or wrongdoing."
+  },
+  "status": {
+    "active": "Active",
+    "pending": "Pending",
+    "verified": "Verified",
+    "unverified": "Unverified",
+    "modified": "Modified",
+    "critical": "Critical",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "valid": "Valid",
+    "warning": "Warning"
+  },
+  "empty": {
+    "noData": "No data available",
+    "noAlerts": "No alerts detected",
+    "noCrossCase": "No cross-case connections currently identified",
+    "noCoordinates": "Location recorded without coordinates",
+    "noModelSignals": "No model signals pending review",
+    "noTimeline": "No timeline events available",
+    "noIntegrityIssues": "No integrity issues detected"
+  }
+}

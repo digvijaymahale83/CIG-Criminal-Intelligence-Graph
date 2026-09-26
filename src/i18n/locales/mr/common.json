@@ -1,0 +1,95 @@
+{
+  "app": {
+    "title": "CIG — गुन्हेगारी गुप्तवार्ता ग्राफ (Criminal Intelligence Graph)",
+    "shortTitle": "CIG",
+    "subtitle": "गुन्हेगारी गुप्तवार्ता ग्राफ (Criminal Intelligence Graph)",
+    "environment": "सिंथेटिक गुप्तवार्ता पर्यावरण",
+    "roleClearance": "भूमिका मंजुरी:",
+    "administrator": "प्रशासक",
+    "investigator": "तपास अधिकारी",
+    "signOut": "सत्र समाप्त करा (साइन आउट)"
+  },
+  "nav": {
+    "intelligence": "गुप्तवार्ता (इंटेलिजन्स)",
+    "operations": "ऑपरेशन्स",
+    "administration": "प्रशासन",
+    "overview": "डॅशबोर्ड सारांश",
+    "investigations": "तपास प्रकरणे",
+    "casesEvidence": "प्रकरणे आणि पुरावे",
+    "evidence": "प्रकरणे आणि पुरावे",
+    "entityIntel": "घटक गुप्तवार्ता",
+    "entities": "घटक गुप्तवार्ता",
+    "knowledgeGraph": "नॉलेज ग्राफ",
+    "graph": "नॉलेज ग्राफ",
+    "graphAnalytics": "ग्राफ विश्लेषण",
+    "analytics": "ग्राफ विश्लेषण",
+    "timeline": "तपास वेळरेषा",
+    "crossCase": "घटक निराकरण",
+    "resolution": "घटक निराकरण",
+    "networkMap": "तपास नकाशा",
+    "map": "तपास नकाशा",
+    "systemAlerts": "अलर्ट",
+    "alerts": "अलर्ट",
+    "intelReports": "अहवाल",
+    "reports": "अहवाल",
+    "audit": "तपासणी आणि ऑडिट",
+    "copilot": "तपास कोपायलट"
+  },
+  "actions": {
+    "refresh": "रिफ्रेश करा",
+    "review": "पुनरावलोकन करा",
+    "verify": "पडताळणी करा",
+    "view": "पहा",
+    "filter": "फिल्टर करा",
+    "search": "शोधा",
+    "open": "उघडा",
+    "cancel": "रद्द करा",
+    "save": "जतन करा",
+    "export": "निर्यात करा",
+    "close": "बंद करा"
+  },
+  "theme": {
+    "light": "लाईट",
+    "dark": "डार्क",
+    "system": "सिस्टम",
+    "toggleTheme": "थीम बदला"
+  },
+  "language": {
+    "selectLanguage": "भाषा",
+    "en": "English",
+    "mr": "मराठी (Marathi)",
+    "hi": "हिन्दी (Hindi)",
+    "ta": "தமிழ் (Tamil)",
+    "te": "తెలుగు (Telugu)",
+    "bn": "বাংলা (Bengali)",
+    "gu": "ગુજરાતી (Gujarati)",
+    "kn": "ಕನ್ನಡ (Kannada)"
+  },
+  "responsibleAi": {
+    "badge": "पुरावा-आधारित निर्णय साहाय्य",
+    "title": "प्रशासकीय आणि पुरावा मानके",
+    "notice": "विश्लेषणात्मक आणि मॉडेल-व्युत्पन्न संकेत हे तपासाचे मार्ग आहेत आणि मानवी पडताळणी आवश्यक आहे. ते अपराध किंवा दोष सिद्ध करत नाहीत."
+  },
+  "status": {
+    "active": "सक्रिय",
+    "pending": "प्रलंबित",
+    "verified": "पडताळलेले",
+    "unverified": "असत्यापित",
+    "modified": "बदललेले",
+    "critical": "अति-गंभीर",
+    "high": "उच्च",
+    "medium": "मध्यम",
+    "low": "कमी",
+    "valid": "वैध",
+    "warning": "चेतावणी"
+  },
+  "empty": {
+    "noData": "माहिती उपलब्ध नाही",
+    "noAlerts": "कोणतेही अलर्ट आढळले नाहीत",
+    "noCrossCase": "सध्या कोणतेही आंतर-प्रकरण संबंध ओळखले नाहीत",
+    "noCoordinates": "भौगोलिक निर्देशांकांशिवाय नोंदवलेले ठिकाण",
+    "noModelSignals": "पुनरावलोकनासाठी कोणतेही मॉडेल संकेत प्रलंबित नाहीत",
+    "noTimeline": "कोणत्याही वेळरेषा घटना उपलब्ध नाहीत",
+    "noIntegrityIssues": "कोणतीही सत्यता विसंगती आढळली नाही"
+  }
+}

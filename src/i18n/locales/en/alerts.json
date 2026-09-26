@@ -1,0 +1,9 @@
+{
+  "title": "Investigative Alerts & Anomaly Signals",
+  "runDetection": "Run Anomaly Detection",
+  "acknowledge": "Acknowledge",
+  "review": "Mark Under Review",
+  "resolve": "Resolve Alert",
+  "explanation": "Structured Anomaly Explanation",
+  "evidenceCited": "Cited Evidence Item"
+}

@@ -1,0 +1,16 @@
+{
+  "title": "प्रकरण पुरावा नोंदवही",
+  "upload": "पुरावा अपलोड करा",
+  "detail": "पुरावा तपशील",
+  "originalView": "मूळ पुरावा",
+  "translatedView": "भाषांतरित दृश्य",
+  "machineTranslation": "यंत्र भाषांतर (Machine Translation)",
+  "machineTranslationDisclaimer": "यंत्र भाषांतर केवळ तपासणी संदर्भासाठी उपलब्ध करून दिले आहे आणि तो अधिकृत पुरावा मानला जाऊ नये. मूळ पुरावा अपरिवर्तित राहतो.",
+  "verifyNow": "आता पडताळा",
+  "hash": "SHA-256 फिंगरप्रिंट",
+  "ledgerBlock": "लेजर ब्लॉक",
+  "chainStatus": "साखळी स्थिती",
+  "provenance": "उगम / मूळ",
+  "extractedEntities": "निष्कर्षित घटक",
+  "extractedRelationships": "निष्कर्षित संबंध"
+}

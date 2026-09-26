@@ -1,0 +1,102 @@
+{
+  "title": "तपासणीस नियंत्रण केंद्र",
+  "subtitle": "प्रकरण-स्तरीय गुप्तवार्ता विहंगावलोकन",
+  "activeInvestigation": "सक्रिय तपासणी",
+  "lastUpdated": "शेवटचे अद्यतन",
+  "kpi": {
+    "entities": "घटक / व्यक्ती",
+    "relationships": "संबंध / दुवे",
+    "evidence": "पुरावे",
+    "alerts": "सतर्कता सूचना",
+    "crossCase": "प्रकरण-पार दुवे",
+    "modelSignals": "मॉडेल संकेत"
+  },
+  "network": {
+    "title": "नेटवर्क विहंगावलोकन",
+    "nodes": "घटक (Nodes)",
+    "relationships": "संबंध",
+    "components": "घटक गट",
+    "openFullGraph": "संपूर्ण आलेख उघडा",
+    "topConnected": "सर्वाधिक जोडलेले घटक:",
+    "degree": "जोडणी प्रमाण (Degree)"
+  },
+  "signals": {
+    "title": "तपास संकेत",
+    "whyItMatters": "हे का महत्त्वाचे आहे",
+    "evidenceCount": "पुरावा संख्या",
+    "modelScore": "मॉडेल गुण",
+    "status": "स्थिती"
+  },
+  "integrity": {
+    "title": "पुरावा अखंडता",
+    "verified": "सत्यापित",
+    "modified": "बदललेले",
+    "unreconciled": "न जुळलेले",
+    "ledgerHealth": "लेजर आरोग्य",
+    "verifyChain": "साखळी पडताळा",
+    "viewEvidenceIntegrity": "पुरावा अखंडता पहा",
+    "warning": "अखंडता सतर्कता चेतावणी",
+    "expectedHash": "अपेक्षित SHA-256",
+    "currentHash": "सध्याचा SHA-256",
+    "ledgerBlock": "लेजर ब्लॉक"
+  },
+  "timeline": {
+    "title": "घटनाक्रम पूर्वावलोकन",
+    "openTimeline": "घटनाक्रम उघडा",
+    "timeUnavailable": "वेळ उपलब्ध नाही"
+  },
+  "map": {
+    "title": "तपास नकाशा",
+    "openMap": "तपास नकाशा उघडा",
+    "withoutCoordinates": "अक्षांश-रेखांश नोंद नसलेले स्थान"
+  },
+  "crossCase": {
+    "title": "प्रकरण-पार संबंध",
+    "confirmed": "पुष्टी झालेले",
+    "potential": "संभाव्य",
+    "modelPredicted": "मॉडेल-अनुमानित",
+    "reason": "कारण",
+    "supportingRecords": "समर्थक नोंदी",
+    "reviewCrossCase": "प्रकरण-पार गुप्तवार्ता तपासा"
+  },
+  "analytics": {
+    "title": "नेटवर्क विश्लेषण",
+    "openAnalytics": "नेटवर्क विश्लेषण उघडा"
+  },
+  "model": {
+    "title": "मॉडेल-व्युत्पन्न संकेत",
+    "score": "गुण",
+    "model": "मॉडेल",
+    "pendingReview": "पुनरावलोकन प्रलंबित",
+    "reviewNotice": "तपासनीस पडताळणी आवश्यक",
+    "reviewSignals": "मॉडेल संकेत तपासा"
+  },
+  "alerts": {
+    "title": "सतर्कता सूचना आणि विसंगती",
+    "critical": "अतिगंभीर",
+    "high": "उच्च",
+    "medium": "मध्यम",
+    "low": "कमी",
+    "new": "नवीन",
+    "underReview": "पुनरावलोकनाधीन",
+    "resolved": "निराकरण झालेले"
+  },
+  "copilot": {
+    "title": "तपास कोपायलट",
+    "suggestedQuestions": "सुचवलेले प्रश्न",
+    "openCopilot": "कोपायलट उघडा"
+  },
+  "actions": {
+    "title": "तपासनीस कृती सूची",
+    "type": "प्रकार",
+    "priority": "प्राधान्यता",
+    "action": "कृती"
+  },
+  "activity": {
+    "title": "अलीकडील तपास क्रियाकलाप",
+    "viewAudit": "ऑडिट लेजर पहा"
+  },
+  "dataQuality": {
+    "title": "डेटा गुणवत्ता चेतावणी"
+  }
+}

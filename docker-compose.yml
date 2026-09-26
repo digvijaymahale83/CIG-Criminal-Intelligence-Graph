@@ -1,0 +1,192 @@
+version: '3.8'
+
+services:
+  # ==========================================
+  # 1. Authoritative Datastore: PostgreSQL
+  # ==========================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: criminal_network_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-criminal_network_db}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-criminal_network_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ==========================================
+  # 2. Graph Projection Store: Neo4j
+  # ==========================================
+  neo4j:
+    image: neo4j:5-community
+    container_name: criminal_network_neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: ${NEO4J_AUTH:-neo4j/CriminalNetwork#2026!}
+      NEO4J_dbms_memory_pagecache_size: 512M
+      NEO4J_dbms_memory_heap_initial__size: 512M
+      NEO4J_dbms_memory_heap_max__size: 1G
+    ports:
+      - "7474:7474" # HTTP Browser
+      - "7687:7687" # Bolt protocol
+    volumes:
+      - neo4j_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p 'CriminalNetwork#2026!' 'RETURN 1' || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  # ==========================================
+  # 3. Distributed Cache: Redis
+  # ==========================================
+  redis:
+    image: redis:7-alpine
+    container_name: criminal_network_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ==========================================
+  # 4. Message Broker: RabbitMQ
+  # ==========================================
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: criminal_network_rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-guest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS:-guest}
+    ports:
+      - "5672:5672"   # AMQP
+      - "15672:15672" # Management UI
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_running"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  # ==========================================
+  # 5. Object Storage: MinIO (S3 Compatible)
+  # ==========================================
+  minio:
+    image: minio/minio:latest
+    container_name: criminal_network_minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+    ports:
+      - "9000:9000" # S3 API
+      - "9001:9001" # Web Console
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  # ==========================================
+  # 6. Python FastAPI AI Service
+  # ==========================================
+  ai-service:
+    build:
+      context: ./ai-service
+      dockerfile: Dockerfile
+    container_name: criminal_network_ai_service
+    restart: unless-stopped
+    environment:
+      AI_SERVICE_PORT: 8000
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  # ==========================================
+  # 7. ASP.NET Core 8 Web API
+  # ==========================================
+  api:
+    build:
+      context: ./backend
+      dockerfile: API/Dockerfile
+    container_name: criminal_network_api
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=criminal_network_db;Username=postgres;Password=postgres;Include Error Detail=false;
+      Neo4j__Uri: bolt://neo4j:7687
+      Neo4j__User: neo4j
+      Neo4j__Password: CriminalNetwork#2026!
+      Redis__Configuration: redis:6379,abortConnect=false,connectTimeout=3000
+      AiService__BaseUrl: http://ai-service:8000
+      RabbitMQ__Host: rabbitmq
+      RabbitMQ__Port: 5672
+      RabbitMQ__Username: guest
+      RabbitMQ__Password: guest
+      Storage__Endpoint: http://minio:9000
+      Storage__AccessKey: minioadmin
+      Storage__SecretKey: minioadmin
+    ports:
+      - "5000:5000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      ai-service:
+        condition: service_healthy
+
+  # ==========================================
+  # 8. .NET Background Worker
+  # ==========================================
+  worker:
+    build:
+      context: ./backend
+      dockerfile: Worker/Dockerfile
+    container_name: criminal_network_worker
+    restart: unless-stopped
+    environment:
+      DOTNET_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=criminal_network_db;Username=postgres;Password=postgres;
+      Neo4j__Uri: bolt://neo4j:7687
+      Neo4j__User: neo4j
+      Neo4j__Password: CriminalNetwork#2026!
+      RabbitMQ__Host: rabbitmq
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  neo4j_data:
+  redis_data:
+  rabbitmq_data:
+  minio_data:

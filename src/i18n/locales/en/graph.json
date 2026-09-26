@@ -1,0 +1,13 @@
+{
+  "title": "Knowledge Graph Explorer",
+  "search": "Search entities or phones...",
+  "filterByType": "Filter by Entity Type",
+  "allTypes": "All Types",
+  "depth": "Depth",
+  "expand": "Expand Neighborhood",
+  "shortestPath": "Shortest Path",
+  "nodeDrawerTitle": "Entity Intelligence Dossier",
+  "connectedEdges": "Verified Relationships",
+  "supportingEvidence": "Supporting Evidentiary Citations",
+  "algorithmicLeads": "Algorithmic Leads (GAT Model)"
+}

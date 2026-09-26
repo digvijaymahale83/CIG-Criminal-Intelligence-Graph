@@ -1,0 +1,6 @@
+{
+  "name": "Criminal Network Analysis System",
+  "description": "Evidence-backed investigator decision-support platform for intelligence analysis, entity exploration, provenance tracking, and system health monitoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

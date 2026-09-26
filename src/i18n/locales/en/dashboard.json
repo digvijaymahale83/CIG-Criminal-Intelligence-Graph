@@ -1,0 +1,102 @@
+{
+  "title": "Investigator Command Center",
+  "subtitle": "Case-Scoped Intelligence Overview",
+  "activeInvestigation": "ACTIVE INVESTIGATION",
+  "lastUpdated": "Last updated",
+  "kpi": {
+    "entities": "ENTITIES",
+    "relationships": "RELATIONSHIPS",
+    "evidence": "EVIDENCE",
+    "alerts": "ALERTS",
+    "crossCase": "CROSS-CASE LINKS",
+    "modelSignals": "MODEL SIGNALS"
+  },
+  "network": {
+    "title": "Network Overview",
+    "nodes": "Nodes",
+    "relationships": "Relationships",
+    "components": "Components",
+    "openFullGraph": "Open Full Graph",
+    "topConnected": "Top connected entities:",
+    "degree": "Degree"
+  },
+  "signals": {
+    "title": "Investigation Signals",
+    "whyItMatters": "Why it matters",
+    "evidenceCount": "Evidence count",
+    "modelScore": "Model score",
+    "status": "Status"
+  },
+  "integrity": {
+    "title": "Evidence Integrity",
+    "verified": "Verified",
+    "modified": "Modified",
+    "unreconciled": "Unreconciled",
+    "ledgerHealth": "Ledger Health",
+    "verifyChain": "Verify Chain",
+    "viewEvidenceIntegrity": "View Evidence Integrity",
+    "warning": "INTEGRITY WARNING",
+    "expectedHash": "Expected SHA-256",
+    "currentHash": "Current SHA-256",
+    "ledgerBlock": "Ledger Block"
+  },
+  "timeline": {
+    "title": "Timeline Preview",
+    "openTimeline": "Open Timeline",
+    "timeUnavailable": "Time unavailable"
+  },
+  "map": {
+    "title": "Investigation Map",
+    "openMap": "Open Investigation Map",
+    "withoutCoordinates": "Location recorded without coordinates"
+  },
+  "crossCase": {
+    "title": "Cross-Case Connections",
+    "confirmed": "Confirmed",
+    "potential": "Potential",
+    "modelPredicted": "Model Predicted",
+    "reason": "Reason",
+    "supportingRecords": "supporting records",
+    "reviewCrossCase": "Review Cross-Case Intelligence"
+  },
+  "analytics": {
+    "title": "Network Analytics",
+    "openAnalytics": "Open Network Analytics"
+  },
+  "model": {
+    "title": "Model-Generated Signals",
+    "score": "Score",
+    "model": "Model",
+    "pendingReview": "PENDING REVIEW",
+    "reviewNotice": "Requires investigator verification",
+    "reviewSignals": "Review Model Signals"
+  },
+  "alerts": {
+    "title": "Alerts & Anomalies",
+    "critical": "Critical",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "new": "New",
+    "underReview": "Under Review",
+    "resolved": "Resolved"
+  },
+  "copilot": {
+    "title": "Investigation Copilot",
+    "suggestedQuestions": "Suggested Questions",
+    "openCopilot": "Open Copilot"
+  },
+  "actions": {
+    "title": "Investigator Actions Queue",
+    "type": "Type",
+    "priority": "Priority",
+    "action": "Action"
+  },
+  "activity": {
+    "title": "Recent Investigation Activity",
+    "viewAudit": "View Audit Ledger"
+  },
+  "dataQuality": {
+    "title": "DATA QUALITY WARNING"
+  }
+}

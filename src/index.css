@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, .dark, .dark *));
+
+@layer base {
+  :root, [data-theme="dark"], .dark {
+    /* Platform Dark Navy Theme */
+    --background: #0d1117;
+    --color-bg: #0d1117;
+    --color-canvas: #0d1117;
+    --color-bg-canvas: #0d1117;
+
+    --surface: #161b22;
+    --color-surface: #161b22;
+    --color-bg-surface: #161b22;
+
+    --surface-secondary: #21262d;
+    --color-surface-subtle: #21262d;
+
+    --surface-elevated: #1c2128;
+    --color-bg-elevated: #1c2128;
+    --color-bg-overlay: #21262d;
+
+    --border: #30363d;
+    --color-border: #30363d;
+    --color-border-subtle: #21262d;
+
+    --input-background: #0d1117;
+    --input-border: #30363d;
+    --color-input-bg: #0d1117;
+    --color-input-border: #30363d;
+
+    /* Text */
+    --text-primary: #e6edf3;
+    --color-text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --color-text-secondary: #8b949e;
+    --text-muted: #6e7681;
+    --color-text-muted: #6e7681;
+
+    /* Accent */
+    --accent: #1f6feb;
+    --color-accent: #1f6feb;
+    --accent-hover: #388bfd;
+    --color-accent-hover: #388bfd;
+    --color-accent-blue: #1f6feb;
+    --color-accent-blue-hover: #388bfd;
+
+    /* Status & Risk */
+    --danger: #f85149;
+    --color-critical: #f85149;
+    --color-danger: #f85149;
+    --warning: #d29922;
+    --color-high: #e3b341;
+    --color-warning: #d29922;
+    --success: #3fb950;
+    --color-medium: #3fb950;
+    --color-success: #3fb950;
+    --color-low: #79c0ff;
+  }
+
+  [data-theme="light"], .light {
+    /* Platform Light Theme */
+    --background: #f6f8fa;
+    --color-bg: #f6f8fa;
+    --color-canvas: #f6f8fa;
+    --color-bg-canvas: #f6f8fa;
+
+    --surface: #ffffff;
+    --color-surface: #ffffff;
+    --color-bg-surface: #ffffff;
+
+    --surface-secondary: #f0f2f5;
+    --color-surface-subtle: #f0f2f5;
+
+    --surface-elevated: #ffffff;
+    --color-bg-elevated: #ffffff;
+    --color-bg-overlay: #eaeef2;
+
+    --border: #d0d7de;
+    --color-border: #d0d7de;
+    --color-border-subtle: #e1e4e8;
+
+    --input-background: #ffffff;
+    --input-border: #d0d7de;
+    --color-input-bg: #ffffff;
+    --color-input-border: #d0d7de;
+
+    /* Text */
+    --text-primary: #1f2328;
+    --color-text-primary: #1f2328;
+    --text-secondary: #57606a;
+    --color-text-secondary: #57606a;
+    --text-muted: #8c959f;
+    --color-text-muted: #8c959f;
+
+    /* Accent */
+    --accent: #0969da;
+    --color-accent: #0969da;
+    --accent-hover: #0860ca;
+    --color-accent-hover: #0860ca;
+    --color-accent-blue: #0969da;
+    --color-accent-blue-hover: #0860ca;
+
+    /* Status & Risk */
+    --danger: #cf222e;
+    --color-critical: #cf222e;
+    --color-danger: #cf222e;
+    --warning: #9a6700;
+    --color-high: #9a6700;
+    --color-warning: #9a6700;
+    --success: #1a7f37;
+    --color-medium: #1a7f37;
+    --color-success: #1a7f37;
+    --color-low: #0969da;
+  }
+
+  html, body, #root {
+    background-color: var(--color-bg-canvas);
+    color: var(--color-text-primary);
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Default form controls styling to follow theme */
+  input, select, textarea {
+    color-scheme: light dark;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-canvas);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-muted);
+  }
+}
+
+/* Core Semantic Utility Classes */
+.bg-canvas { background-color: var(--color-bg-canvas); }
+.bg-surface { background-color: var(--color-surface); }
+.bg-surface-subtle { background-color: var(--color-surface-subtle); }
+.bg-surface-elevated { background-color: var(--color-bg-elevated); }
+.border-theme { border-color: var(--color-border); }
+.border-theme-subtle { border-color: var(--color-border-subtle); }
+.text-theme-primary { color: var(--color-text-primary); }
+.text-theme-secondary { color: var(--color-text-secondary); }
+.text-theme-muted { color: var(--color-text-muted); }
+.text-theme-accent { color: var(--color-accent); }
+.bg-theme-accent { background-color: var(--color-accent); }
+
+/* Leaflet dark/light map overrides */
+.dark .leaflet-container {
+  background: #161b22 !important;
+}
+
+.dark .leaflet-tile {
+  filter: brightness(0.85) saturate(0.8);
+}
+
+.light .leaflet-container {
+  background: #f6f8fa !important;
+}
+
+.light .leaflet-tile {
+  filter: none;
+}
+
+/* Cytoscape canvas bg */
+.dark .cy-container {
+  background: #0d1117;
+}
+
+.light .cy-container {
+  background: #ffffff;
+}
+
+/* Pulsing animation for risk dots */
+@keyframes cortex-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+.pulse-critical {
+  animation: cortex-pulse 1.5s ease-in-out infinite;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition-property: color, background-color, border-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}

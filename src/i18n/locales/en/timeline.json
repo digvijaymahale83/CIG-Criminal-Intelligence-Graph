@@ -1,0 +1,8 @@
+{
+  "title": "Chronological Investigation Timeline",
+  "precision": "Temporal Precision",
+  "activeRange": "Active Event Range",
+  "timeUnavailable": "Time unavailable",
+  "dateOnly": "Date recorded without specific time",
+  "filterByType": "Filter by Event Type"
+}

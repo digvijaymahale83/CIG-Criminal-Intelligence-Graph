@@ -1,0 +1,20 @@
+{
+  "title": "Investigation Copilot",
+  "subtitle": "Evidence-Grounded Intelligence Reasoning Engine",
+  "askPlaceholder": "Ask an investigative question about this case in English or मराठी...",
+  "send": "Ask Copilot",
+  "confidence": "Grounded Confidence",
+  "citations": "Evidentiary Grounding Citations",
+  "claims": "Structured Claims",
+  "modelSignalWarning": "Algorithmic model predictions require human investigator verification before being accepted as evidence.",
+  "unsupportedWarning": "Claim is unsupported by current case evidence.",
+  "suggested": {
+    "q1": "What are the strongest connections in this case?",
+    "q2": "Which entities connect multiple records?",
+    "q3": "What changed in the last 48 hours?",
+    "q4": "Which alerts require review?",
+    "q5": "What evidence supports this relationship?",
+    "q6": "Are there potential cross-case connections?",
+    "q7": "What is the current evidence integrity status?"
+  }
+}

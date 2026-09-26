@@ -1,0 +1,16 @@
+{
+  "title": "Case Evidence Registry",
+  "upload": "Upload Evidence",
+  "detail": "Evidence Details",
+  "originalView": "Original Evidence",
+  "translatedView": "Translated View",
+  "machineTranslation": "Machine Translation",
+  "machineTranslationDisclaimer": "Machine translation is provided for investigative reference only and is not authoritative evidence. Original evidence remains unchanged.",
+  "verifyNow": "Verify Now",
+  "hash": "SHA-256 Fingerprint",
+  "ledgerBlock": "Ledger Block",
+  "chainStatus": "Chain Status",
+  "provenance": "Provenance",
+  "extractedEntities": "Extracted Entities",
+  "extractedRelationships": "Extracted Relationships"
+}

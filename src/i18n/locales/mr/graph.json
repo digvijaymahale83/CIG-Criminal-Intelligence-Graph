@@ -1,0 +1,13 @@
+{
+  "title": "गुप्तवार्ता आलेख अन्वेषक (Knowledge Graph)",
+  "search": "घटक किंवा फोन नंबर शोधा...",
+  "filterByType": "घटक प्रकारानुसार फिल्टर करा",
+  "allTypes": "सर्व प्रकार",
+  "depth": "खोली (Depth)",
+  "expand": "शेजारील संबंध वाढवा",
+  "shortestPath": "सर्वात लहान मार्ग",
+  "nodeDrawerTitle": "घटक गुप्तवार्ता संचिका",
+  "connectedEdges": "सत्यापित संबंध",
+  "supportingEvidence": "समर्थक पुरावा संदर्भ",
+  "algorithmicLeads": "अल्गोरिदम लीड्स (GAT मॉडेल)"
+}

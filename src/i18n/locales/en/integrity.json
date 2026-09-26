@@ -1,0 +1,12 @@
+{
+  "title": "Cryptographic Evidence Integrity Ledger",
+  "blockchainChain": "Append-Only Immutable Ledger",
+  "verifyAll": "Verify Complete Chain",
+  "blockIndex": "Block #",
+  "previousHash": "Previous Block Hash",
+  "currentHash": "Block Hash",
+  "fileHash": "Evidence SHA-256",
+  "statusValid": "CHAIN INTEGRITY VALID",
+  "statusCompromised": "CHAIN COMPROMISED",
+  "tamperWarning": "Physical byte-level modification detected. Evidence file does not match recorded SHA-256 hash."
+}
